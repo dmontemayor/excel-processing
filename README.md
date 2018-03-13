@@ -1,40 +1,49 @@
-<<<<<<< HEAD
-=======
-## Welcome to GitHub Pages
+# excel-processing
+Project specific code for processing excel files.
 
-You can use the [editor on GitHub](https://github.com/dmontemayor/excel-processing/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Getting Started
+This project is based on a [standard install of anaconda](https://docs.anaconda.com/anaconda/install/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+OK, the safest way is to create a virtual environment and install the required
+packages there. You will run this script under this environment.
 
-### Markdown
+Create a virtual environment with conda.
+Refer to this [usefull guide](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/) and [this one](https://samrelton.wordpress.com/2015/07/02/rconda/) for more detailed tutorials.
+```
+$ conda create -n excelENV anaconda  
+```
+Proceed with adding all the new packages by pressing `y`.
+Now, switch to this new environment.
+```
+$ source activate excelENV
+```
+Install R.
+```
+$ conda install -c r r
+```
+Again, proceed with adding all the new packages by pressing `y`.
+Next, add required packages to your environment.
+```
+ conda install -c r r-rcurl r-jsonlite
+```
+Again proceed by pressing `y`.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Finally, launch R then set the working directory to the location of this script and execute the script.
+```
+$ R
+```
+```
+> setwd("path/to/this/script")
+> source("downloadAll.R")
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+*Alternatively you can just run the script from the terminal with
+Rscript.*
+```
+$ Rscript path/to/this/script/downloadAll.R
+```
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dmontemayor/excel-processing/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
->>>>>>> 54b7d05cd0756b012278cabb44dfac4142260593
+When finished, deactivate the environment and end your session.
+```
+$ source deactivate excelENV
+```
