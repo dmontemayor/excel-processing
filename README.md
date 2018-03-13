@@ -9,9 +9,41 @@ packages there. You will run this script under this environment.
 
 Create a virtual environment with conda.
 Refer to this [usefull guide](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/) and [this one](https://samrelton.wordpress.com/2015/07/02/rconda/) for more detailed tutorials.
+
+## For Windows with Anaconda Prompt installed
+Once Anaconda is installed, search within Windows Operating System for the
+Anaconda Prompt. Then input the following commands step-by-step.
 ```
 $ conda create -n excelENV anaconda  
 ```
+Activating the environment
+```
+$ conda  activate excelENV
+```
+
+Installing R
+```
+$ conda install -c r r
+```
+
+Install Requirements
+```
+conda install --file requirements.txt
+```
+
+
+## For Mac OS and UNIX
+```
+$ conda create -n excelENV anaconda  
+```
+
+Install R.
+```
+$ conda install -c r r
+```
+
+Again, proceed with adding all the new packages by pressing `y`.
+##
 Proceed with adding all the new packages by pressing `y`.
 Now, switch to this new environment.
 ```
